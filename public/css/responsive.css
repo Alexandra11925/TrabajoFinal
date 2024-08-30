@@ -450,6 +450,7 @@ main section .uñas1{
         position: static;
         padding: 0;
         box-shadow: none;
+        background-color: rgba(253, 237, 250, 0.3)
     }
 
     .nav-link li{
@@ -531,6 +532,7 @@ main section .uñas1{
         position: static;
         padding: 0;
         box-shadow: none;
+        background-color: rgba(253, 237, 250, 0.3)
     }
 
     .nav-link li{
