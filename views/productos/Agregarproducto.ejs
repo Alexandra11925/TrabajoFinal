@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Public/css/responsive-ecommercefinal.css">
+    <link rel="stylesheet" href="/Public/css/footer.css">
+    <link rel="stylesheet" href="/Public/js/footer.js">
+</head>
+    <%- include('partials/header') %>
+
+<body>
+    <div class="tituloproducto">
+        <h2 class="titulo">Datos del producto y contacto</h2>
+    </div>
+    <form class = "listadoregistro" action = "./" method = "GET">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <br>
+
+        <label for="precio">Precio: </label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+        <br>
+        <br>
+
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen">
+        <br>
+        <br>
+
+        <label for="id_categoria">Categoría: </label>
+
+        <select id="id_categoria" name="id_categoria" required>
+            <% categorias.forEach(categoria => { %>
+                <option value="<%= categoria.id_categoria %>"><%= categoria.nombre %></option>
+            <% }) %>
+        </select>
+        <button type="submit">Añadir producto</button>
+    </form>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

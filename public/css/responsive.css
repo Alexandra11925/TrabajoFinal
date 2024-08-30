@@ -1,0 +1,581 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: Arial, sans-serif;
+    background-image: url('/public/images/Pomos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container-principal{
+    background-color: rgba(253, 237, 250, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ajustar-imagen {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    background-image: url('/images/Gotas.jpg');
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.logo:hover{
+    color: blueviolet;
+
+}
+
+.menu-icon{
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fa-solid{
+    color: black;
+}
+
+.nav-link{
+    display: none; /*Oculta el menú*/
+    list-style-type: none; /*Quita las viñetas*/
+    flex-direction: column; /*Muestra en columna el menú*/
+    padding: 16px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link.show{
+    display: flex;
+}
+
+.nav-link li{
+    margin: 10px 4px;
+    font-size: 1.3rem;
+    font-family: Tahoma, sans-serif;
+    
+}
+
+.nav-link a{
+    color: rgb(0, 0, 0);
+    text-decoration: none; /*Quita el subrayado*/
+    transition: color 0.3s
+}
+
+.nav-link a:hover{
+    color: blueviolet;
+}
+
+.logobanner{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+main section article:hover {
+    box-shadow : 0px 0px 10px blueviolet;
+    transition: 300ms;
+}
+main article .main-article {
+    padding: 10px;
+    border-top: 1px solid #e787d7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 15px;
+}
+
+main section article {
+    background-color: rgb(243, 236, 236);
+    margin-bottom: 20px;
+    transition: all;
+    box-shadow: 0px 0px 10px, 3px 3px 10px #d36dcee0;
+    width: auto;
+    padding-bottom: 20px;
+}
+
+
+
+main section .listado{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h4{
+    font-size: 15px;
+    font-family: 'Lucida Sans', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main section article img {
+    margin: 15px;
+}
+
+main section .uñas{
+    width: 250px;
+    height: 250px;
+}
+
+main section .uñas1{
+    width: 250px;
+    height: 250px;
+}
+
+.carru2{
+    display: flex;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.logobanner{
+    width: 100%;
+}
+
+
+/* Agrega tu producto */
+
+.listadoregistro{
+    max-width: 800px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Opcional: Añade algo de espacio interno */
+    border: 1px solid #ccc; /* Define el borde */
+    border-radius: 10px; /* Opcional: Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Sombra para el borde */
+}
+.header-registro{
+    background-color: rgba(253, 237, 250, 0.8);
+    padding: 10px;
+    padding-top: 20px;
+    height: 120px;
+}
+.imagen{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-left: 5px;
+}
+
+.logo-comprar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registro{
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.fa-solid{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.tituloproducto{
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* .nombre-apellidos{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 10px;
+    margin-right: 5px;
+} */
+
+.datos{
+    font-size: 17px;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.nombre-apellidos,
+.correo1,
+.producto,
+.fotoproducto,
+.valorproducto{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;   
+}
+
+.datos1{
+    font-size: 17px;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.datos2{
+    font-size: 17px;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+#nombre.ingresodato{
+    border-radius: 8px;
+    width: 300px;
+    margin-right: 2px;
+    box-shadow: inset 0px 0px 10px rgba(179, 175, 179, 0.89);
+}
+
+#correo.ingresodato1,
+#precio.ingresodato1{
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: inset 0px 0px 10px rgba(179, 175, 179, 0.89);
+    margin-left: 15px;
+}
+
+.categ{
+    width: 360px; /* Ajusta el ancho de la lista desplegable */
+    padding: 5px; /* Ajusta el relleno interno */
+    margin-right: 15px;
+}
+#product.ingresodato2{
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: inset 0px 0px 10px rgba(179, 175, 179, 0.89);
+    margin-left: 6px;    
+}
+
+.fotoproducto{
+    display: flex;
+}
+
+#imagen.adjunto{
+    display: flex;
+    font-size: 12px;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-left: 105px;
+ 
+}
+
+.datos2{
+    font-size: 17px;
+    flex-wrap: wrap;
+}
+.botones{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.boton{
+    border-radius: 8px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    display: block; /* Hace que el botón sea un bloque, ocupando toda la línea */
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.listado {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio */
+    /* gap: 20px; */
+    justify-content: space-evenly; 
+    margin: auto;
+}
+
+.producto-item {
+    /*   
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; */
+    box-shadow: 0px 0px 10px, 3px 3px 10px #d36dcee0;
+    background-color: rgb(243, 236, 236);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #e787d7;
+    width: 250px; /* Ajusta el ancho según lo necesites */
+    min-height: 350px;
+    box-sizing: border-box;
+}
+
+/* .producto-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+} */
+
+.article {
+    /* padding: 10px;
+    border-top: 1px solid #e787d7;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 15px; */
+    background-color: rgb(243, 236, 236);
+    margin-bottom: 20px;
+    transition: all;
+    box-shadow: 0px 0px 10px, 3px 3px 10px #d36dcee0;
+    width: auto;
+    padding-bottom: 20px;
+
+}
+
+.producto-item {
+    /* width: 100%;  */
+    padding: 10px;
+    border-top: 1px solid #e787d7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 15px;
+}
+
+.producto-item h4, .producto-item .main-article {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.producto-item form {
+    margin-top: auto;
+}
+/* .opciones{
+    display: flex;
+    margin-bottom: 100px;
+} */
+
+.uñas{
+    width: 150px;
+    height: 150px;
+}
+
+.descripcion{
+    overflow-wrap: break-word
+}
+
+.anadir{
+    text-decoration: none;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: flex;
+    margin-left: 20px;
+}
+
+.inic{
+    text-decoration: none;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    display: flex;
+    margin-left: 20px;
+}
+/*Visualización para tablet*/
+@media (min-width: 601px) and (max-width: 800px){
+
+    .logo{
+        display: block;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .menu-icon{
+        display: none; /*Me oculta la hamburguesa*/
+    }
+
+    .nav-link{
+        display: flex;
+        flex-direction: row; /*Me muestra el menú en horizontal*/
+        width: auto;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-link li{
+        margin: 16px;
+    }
+
+
+    .carru2{
+        display: flex;
+        padding: 10px;
+        object-fit: cover
+    }
+
+    .listadoregistro{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    /* .nombre-apellidos{
+        margin-right: 18px;
+    } */
+
+    #nombre.ingresodato,
+    #apellido.ingresodato{
+        width: 350px;
+        /* margin-right: 12px; */
+    }
+    
+    #correo.ingresodato1,
+    #precio.ingresodato1{
+        width: 350px;
+    }
+
+    #product.ingresodato2{
+        width: 350px;
+        margin-left: 7px;    
+    }
+
+    #imagen.adjunto{
+        font-size: 14px;
+        margin-left: 105px;
+    }
+
+    .datos2{
+        margin-left: 10px;
+        margin-right: 15px;
+    }    
+}
+
+.producto-item {
+    /* width: 100%;  */
+    padding: 10px;
+    border-top: 1px solid #e787d7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+@media (min-width: 801px){
+
+    .container-principal{
+        padding: 10px;
+    }
+
+    .h3{
+        margin-bottom: 20px;
+    }
+    .menu-icon{
+        display: none; /*Me oculta la hamburguesa*/
+    }
+
+    .nav-link{
+        display: flex;
+        flex-direction: row; /*Me muestra el menú en horizontal*/
+        width: auto;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-link li{
+        display: flex;
+        margin: 16px;
+        margin-top: 30px;        
+    }
+
+    .carru2{
+        display: flex;
+        padding: 10px;
+        object-fit: cover
+    }
+
+    .listadoregistro{
+        /* margin-left: 75px;
+        margin-right: 75px; */
+        max-width: 90%; /* Ajusta el tamaño del formulario al 90% del ancho de la pantalla */
+        margin: 0 auto; /* Asegura que se mantenga centrado */
+    }
+
+    /* .nombre-apellidos{
+        margin-right: 18px;
+    } */
+
+    #nombre.ingresodato{
+        width: 360px;
+        margin-left: 30px;
+    }
+    
+    #correo.ingresodato1,
+    #precio.ingresodato1{
+        width: 360px;
+        margin-left: 45px;
+    }
+
+    #product.ingresodato2{
+        width: 360px;
+        margin-left: 37px;    
+    }
+
+    #imagen.adjunto{
+        font-size: 15px;
+        margin-left: 135px;
+    }
+
+    .datos2{
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+}
+
+
+

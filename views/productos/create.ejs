@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/menu-icon.js"></script>
+    <title>Crear producto</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <h1 class="tituloproducto">Añadir nuevo producto</h1>
+    <form class="listadoregistro" action="/productos/create" method="POST" enctype="multipart/form-data">
+        <label class="datos1" for="nombre">Nombre: </label>
+        <input class="ingresodato" type="text" id="nombre" name="nombre" required>
+        <br>
+        <br>
+
+        <label class="datos1" for="precio">Precio: </label>
+        <input class="ingresodato1" type="number" id="precio" name="precio" step="0.01" required>
+        <br>
+        <br>
+
+        <label class="datos2" for="imagen">Imagen:</label>
+        <input class="adjunto" type="file" id="imagen" name="imagen">
+        <br>
+        <br>
+
+        <label class="datos1" for="id_categoria">Categoría: </label>
+
+        <select class="categ" id="id_categoria" name="id_categoria" required>
+            <% categorias.forEach(categoria => { %>
+                <option class="categ" value="<%= categoria.id_categoria %>"><%= categoria.nombre %></option>
+            <% }) %>
+        </select>
+        <br>
+        <br>
+        <button class="boton" type="submit">Añadir producto</button>
+
+
+    </form>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

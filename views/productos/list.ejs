@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/menu-icon.js"></script>
+    <title>Listado de Productos</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <h1 class="tituloproducto">Listado de Productos</h1>
+
+    <a class="anadir" href="/productos/create">Añadir un producto</a>
+   
+    <!-- <div class="listado">
+        <% productos.forEach(producto => { %>
+            <img src="/images/<%= producto.imagen%>" alt="<%= producto.nombre %>">
+            <h2><%= producto.nombre %></h2>
+            <p>$<%= producto.precio %></p>
+            <p>Categoría: <%= producto.Categoria ? producto.Categoria.nombre : 'Sin Categoría' %></p>
+
+            <a href="/productos/<%=producto.id_producto%>/edit">Editar</a>
+            <br>
+            <br>
+            <form action="/productos/<%=producto.id_producto%>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar</button>
+            </form>
+        <% }) %>
+        
+    </div> -->
+
+    <div class="listado">
+        <% productos.forEach(producto => { %>
+            <article class="producto-item">
+                <img src="/images/<%= producto.imagen%>" class="uñas" alt="<%= producto.nombre %>">
+                <div class="main-article">
+                    <p class="precio">$<%= producto.precio %></p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <h4 class="descripcion"><%= producto.nombre %></h4>
+                <div class="opciones">
+                    <!-- <p>Categoría: <%= producto.Categoria ? producto.Categoria.nombre : 'Sin Categoría' %></p> -->
+        
+                    <form action="/productos/<%=producto.id_producto%>/edit">
+                        <button>Editar</button>
+
+                        </form>
+                    <form action="/productos/<%=producto.id_producto%>?_method=DELETE" method="POST">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </article>
+        <% }) %>
+    </div>
+    
+
+    <a class="inic" href="/">Volver al Inicio</a>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
